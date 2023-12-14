@@ -9,7 +9,10 @@
 
 ?>
 <div id="assisted_cart_customer_service_menu" class="assisted-cart-menu">
-    <ul class="assisted-cart-menu__list">
+    <button class="assisted-cart-menu__trigger" id="assisted-cart-menu-trigger">
+        <?=__('Customer Service')?>
+    </button>
+    <ul class="assisted-cart-menu__list" style="display: none !important;">
         <li class="assisted-cart-menu__list-item">
             <a
                 href="<?= $escaper->escapeUrl($block->getUrl('help-center')) ?>"
