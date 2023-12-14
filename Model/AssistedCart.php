@@ -10,21 +10,11 @@ namespace Codfish\AssistedCart\Model;
  * @method \Codfish\AssistedCart\Model\ResourceModel\AssistedCart getResource()
  * @method \Codfish\AssistedCart\Model\ResourceModel\AssistedCart\Collection getCollection()
  */
-class AssistedCart extends \Magento\Framework\Model\AbstractModel implements \Codfish\AssistedCart\Api\Data\AssistedCartInterface,
-    \Magento\Framework\DataObject\IdentityInterface
+class AssistedCart extends \Magento\Framework\Model\AbstractModel implements \Codfish\AssistedCart\Api\Data\AssistedCartInterface
 {
-    const CACHE_TAG = 'codfish_assistedcart_assistedcart';
-    protected $_cacheTag = 'codfish_assistedcart_assistedcart';
-    protected $_eventPrefix = 'codfish_assistedcart_assistedcart';
-
     protected function _construct()
     {
         $this->_init('Codfish\AssistedCart\Model\ResourceModel\AssistedCart');
-    }
-
-    public function getIdentities()
-    {
-        return [self::CACHE_TAG . '_' . $this->getId()];
     }
 
     /**
