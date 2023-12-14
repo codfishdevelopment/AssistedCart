@@ -17,7 +17,7 @@ define([], function () {
 
 function getSharableId(customerServiceMenu) {
 
-    if (customerServiceMenu.length) {
+    if (customerServiceMenu) {
         let xhr = new XMLHttpRequest();
         let url = '/rest/V1/assisted-cart/get-sharable-id';
         xhr.open("GET", url, true);
