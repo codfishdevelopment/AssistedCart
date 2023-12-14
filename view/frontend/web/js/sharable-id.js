@@ -5,7 +5,7 @@
 
 define([], function () {
     return function () {
-        const customerServiceMenu = document.getElementById('assisted_cart_customer_service_menu__list');
+        const customerServiceMenu = document.getElementById('assisted_cart_customer_service_menu_list');
         getSharableId(customerServiceMenu);
         const customerServiceMenuTrigger = document.getElementById('assisted-cart-menu-trigger');
         customerServiceMenuTrigger.addEventListener('mouseover', function(){
