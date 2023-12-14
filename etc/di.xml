@@ -10,4 +10,5 @@
         <plugin name="codfishAssistedCartQuoteRepository"
                 type="Codfish\AssistedCart\Plugin\Quote\Model\QuoteRepositoryPlugin"/>
     </type>
+    <preference for="Codfish\AssistedCart\Api\AssistedCartRepositoryInterface" type="Codfish\AssistedCart\Model\AssistedCartRepository"/>
 </config>

@@ -10,7 +10,7 @@
     <route url="/V1/assisted-cart/get-sharable-id" method="GET">
         <service class="Codfish\AssistedCart\Api\AssistedCartRepositoryInterface" method="getSharableIdByCartSession"/>
         <resources>
-            <resource ref="self" />
+            <resource ref="anonymous" />
         </resources>
     </route>
 </routes>
