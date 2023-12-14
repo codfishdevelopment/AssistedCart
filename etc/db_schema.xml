@@ -18,7 +18,7 @@
         <column xsi:type="timestamp" name="updated_at" on_update="true" nullable="false" default="CURRENT_TIMESTAMP"
                 comment="Updated At"/>
         <constraint xsi:type="primary" referenceId="PRIMARY">
-            <column name="codfish_assisted_cart_id"/>
+            <column name="assisted_cart_id"/>
         </constraint>
         <constraint xsi:type="unique" referenceId="UNIQUE">
             <column name="sharable_id"/>
