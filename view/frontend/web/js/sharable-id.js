@@ -10,7 +10,7 @@ define([], function () {
         const customerServiceMenuTrigger = document.getElementById('assisted-cart-menu-trigger');
         customerServiceMenuTrigger.addEventListener('mouseover', function(){
             getSharableId(customerServiceMenu);
-            customerServiceMenu.style.display = 'flex !important';
+            customerServiceMenu.style.display = 'flex';
         });
     }
 });
@@ -23,7 +23,7 @@ function getSharableId(customerServiceMenu) {
         xhr.open("GET", url, true);
 
         xhr.onreadystatechange = function () {
-            if (this.readyState === 4 && this.status === 200) {
+            if (this.status === 200) {
                 const sharableIdContainer = document.createElement('div');
                 sharableIdContainer.classList.add('assisted_cart_sharable_id');
                 sharableIdContainer.innerText = this.responseText;
