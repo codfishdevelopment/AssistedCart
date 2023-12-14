@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Codfish Development. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Codfish_AssistedCart::viewcustomercart" parent="Magento_Customer::customer" title="View Customer Cart" translate="title" module="Codfish_AssistedCart" sortOrder="100" dependsOnModule="Codfish_AssistedCart" resource="Codfish_AssistedCart::default"/>
+    </menu>
+</config>

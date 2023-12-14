@@ -1,0 +1,53 @@
+<?php
+/**
+ * Copyright © Codfish Development. All rights reserved.
+ * See COPYING.txt for license details.
+ *
+ * @var \Magento\Framework\View\Element\Template $block
+ * @var \Magento\Framework\Escaper $escaper
+ */
+
+?>
+<div id="assisted_cart_customer_service_menu" class="assisted-cart-menu">
+    <ul class="assisted-cart-menu__list">
+        <li class="assisted-cart-menu__list-item">
+            <a
+                href="<?= $escaper->escapeUrl($block->getUrl('help-center')) ?>"
+                class="assisted-cart-menu__list-item-link"
+                title="<?=__('Help Center')?>">
+                <?=__('Help Center')?>
+            </a>
+        </li>
+        <li class="assisted-cart-menu__list-item">
+            <a
+                href="<?= $escaper->escapeUrl($block->getUrl('check-order-status')) ?>"
+                class="assisted-cart-menu__list-item-link"
+                title="<?=__('Check Order Status')?>">
+                <?=__('Check Order Status')?>
+            </a>
+        </li>
+        <li class="assisted-cart-menu__list-item">
+            <a
+                href="<?= $escaper->escapeUrl($block->getUrl('faqs')) ?>"
+                class="assisted-cart-menu__list-item-link"
+                title="<?=__('FAQs')?>">
+                <?=__('FAQs')?>
+            </a>
+        </li>
+        <li class="assisted-cart-menu__list-item">
+            <a
+                href="<?= $escaper->escapeUrl($block->getUrl('contact-us')) ?>"
+                class="assisted-cart-menu__list-item-link"
+                title="<?=__('Contact Us')?>">
+                <?=__('Contact Us')?>
+            </a>
+        </li>
+    </ul>
+</div>
+<script type="text/x-magento-init">
+    {
+        "#assisted_cart_customer_service_menu": {
+            "sharableId": {}
+        }
+    }
+</script>

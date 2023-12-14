@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Codfish Development. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="codfish_assisted_cart" resource="default" engine="innodb" comment="Codfish Assisted Cart">
+        <column xsi:type="int" name="assisted_cart_id" unsigned="true" nullable="false" identity="true" comment="Assisted Cart Id"/>
+        <column xsi:type="varchar" name="sharable_id" nullable="false" comment="UUID Generated ID for sharing the customer cart with a customer service agent"/>
+        <column xsi:type="int" name="is_logged_in" nullable="false" comment="Is this a logged in customer?"/>
+        <column xsi:type="int" name="customer_id" nullable="false" comment="Customer ID of a logged in customer"/>
+        <column xsi:type="int" name="quote_id" nullable="false" comment="Quote ID"/>
+        <column xsi:type="timestamp" name="created_at" on_update="false" nullable="false" default="CURRENT_TIMESTAMP"
+                comment="Created At"/>
+        <column xsi:type="timestamp" name="updated_at" on_update="true" nullable="false" default="CURRENT_TIMESTAMP"
+                comment="Updated At"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="codfish_assisted_cart_id"/>
+        </constraint>
+        <constraint xsi:type="unique" referenceId="UNIQUE">
+            <column name="sharable_id"/>
+        </constraint>
+    </table>
+</schema>
